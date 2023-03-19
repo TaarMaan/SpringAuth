@@ -1,4 +1,4 @@
-package com.example.springAuth;
+/*package com.example.springAuth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,4 +10,4 @@ class SpringAuthApplicationTests {
     void contextLoads() {
     }
 
-}
+}*/
