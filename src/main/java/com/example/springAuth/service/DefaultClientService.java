@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class DefaultClientService extends ClientService {
+public class DefaultClientService implements ClientService {
     private final ClientRepository userRepository;
 
     @Override

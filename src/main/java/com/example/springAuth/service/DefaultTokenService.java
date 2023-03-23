@@ -10,7 +10,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 @Service
-public class DefaultTokenService extends TokenService {
+public class DefaultTokenService implements TokenService {
     @Value("${auth.jwt.secret}")
     private String secretKey;
 
