@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
+    /**
+     * Контроллер с двумя эндпоинтами:
+     * * reister - принятие http-запроса при регистрации нового пользователя в системе
+     * * getToken - принятие http-запроса при успешной автооризации пользователя ( выдача токена сессии)
+     */
 
     private final ClientService clientService;
     private final TokenService tokenService;

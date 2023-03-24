@@ -14,6 +14,16 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class DefaultClientService implements ClientService {
+    /**
+     * Реализация интерфейса ClientService.
+     *
+     * register - функция, использующая криптографическую хеш-функцию (Bcrypt), при регистрации
+     * клиента генерируем соль методом gensalt() и вычисляем хеш. В итоге получаем строку,
+     * состояющкю из соли и хеш пароля.
+     *
+     * Для проверки данных пользователя в checkCredentials() используется Bcrypt.checkpw принимающий
+     * значение сохраненное в бд при регистрации.
+     */
     private final ClientRepository userRepository;
 
     @Override

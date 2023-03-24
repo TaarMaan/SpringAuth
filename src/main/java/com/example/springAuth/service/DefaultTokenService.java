@@ -11,6 +11,20 @@ import java.util.Date;
 
 @Service
 public class DefaultTokenService implements TokenService {
+    /**
+     * Реализация интерфейса TokenService по генерации токенов.
+     * JWT - стандарт на основании JSON, для создания токенов.
+     * 3 части:
+     * * Заголовок
+     * * Тело
+     * * Подпись
+     * JWT формируется из набора утверждений:
+     * * Издатель токена (iss)
+     * * Направление в какой сервис (aud)
+     * * Идентификатор клиента (sub)
+     * * Текущее время формаирования токена (iat)
+     * * Вычисленное время окончания действия токена 5 минут (exp)
+     */
     @Value("${auth.jwt.secret}")
     private String secretKey;
 
